@@ -25,3 +25,12 @@ To Include in presentation:
 	- Documentation to replicate data:
 		- File structure
 - Submit Zip file
+
+
+
+DOC:
+https://rawg.io/apidocs
+- Count: 345727
+- Time taken: 373,744.71608‬ s = 103 hrs = 4 s
+- https://api.rawg.io/docs/
+- https://api.rawg.io/api/games
