@@ -27,10 +27,43 @@ To Include in presentation:
 - Submit Zip file
 
 
-
 DOC:
 https://rawg.io/apidocs
 - Count: 345727
 - Time taken: 373,744.71608‬ s = 103 hrs = 4 s
 - https://api.rawg.io/docs/
 - https://api.rawg.io/api/games
+
+- Introduction: (Frank)
+    - Init plan for other porjects
+    - Decide to choose game
+
+- Introduction: (Yifan)
+    - How it can be useful i.e. game recommendation, video game analysis, archive
+    - Where to get API. 
+    - 
+
+- Technical (Trung)
+    - Difficulties and Solutions
+        - Number of files, runtime
+    - API limitation
+    - Limitation
+        - hard to update frequently
+    - Future improvement
+    
+- Distribution (Shibo)
+    - End-product: file size
+    - Where: Github, Kaggle. with links
+    - LICENSE:
+        - MIT License
+        - Permissions
+            - Commercial use
+            - Modification
+            - Distribution
+            - Private use
+    - Screen shot of both pages. 
+        - Mention about Description of data
+        - We have README for github page
+        - File Structure (Code documentation)
+    
+    
