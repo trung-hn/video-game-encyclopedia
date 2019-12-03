@@ -1,4 +1,4 @@
-# Game Encyclopedia
+# Video Game Encyclopedia
 <p align="center">
   <img src="https://user-images.githubusercontent.com/39042628/69937490-f246aa00-14a8-11ea-89ad-073891b7b4a9.png" alt="Gaming">
 </p> 
@@ -51,7 +51,7 @@ Each row contains information about one game. There are several columns that hav
 - `id`: An unique ID identifying this Game in RAWG Database
 - `slug`: An unique slug identifying this Game in RAWG Database
 - `name`: Name of the game
-- `metacritic`: Rating of the game on [Metacritic](https://www.metacritic.com/)
+- `metacritic`: Rating of the game on [Metacritic](https://www.metacritic.com/game)
 - `released`: The date the game was released
 - `tba`: To be announced state
 - `updated`: The date the game was last updated
@@ -64,10 +64,10 @@ Each row contains information about one game. There are several columns that hav
 - `suggestions_count`: Number of RAWG users who suggested the game
 - `game_series_count`: Number of games in the series
 - `reviews_count`: Number of RAWG users who reviewed the game
-- `platforms`: Platforms game was released on. Separated by `||`
-- `developers`: Game developers. Separated by `||`
-- `genres`: Game genres. Separated by `||`
-- `publishers`: Game publishers. Separated by `||`
+- `platforms`: Platforms game was released on. **Separated** by `||`
+- `developers`: Game developers. **Separated** by `||`
+- `genres`: Game genres. **Separated** by `||`
+- `publishers`: Game publishers. **Separated** by `||`
 - `esrb_rating`: ESRB ratings
 - `added_status_yet`: Number of RAWG users had the game as "Not played"
 - `added_status_owned`: Number of RAWG users had the game as "Owned"
