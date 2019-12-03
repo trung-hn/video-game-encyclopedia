@@ -39,6 +39,9 @@ Visit [Kaggle page](https://www.kaggle.com/jummyegg/rawg-game-dataset) for the f
     - Step 3 takes ~5 minutes
 - When 1 thread fails to get data, it will skip to next game/page **without** any notification. To make sure you get all games on the database. You can run Step 1 and Step 2 multiple times. Downloaded files will be **skipped**.
 
+#### Limitations:
+- To reduce the file size of downloaded files and the final CSV dataset, **not all** JSON information are downloaded. If you need more customization, you will need to change how the JSON data is handled in Step 2
+- Although Multhreading was applied, the whole process can take up to ~3 hours to finish because of the large amount of data.
 
 ___
 ### Context
@@ -79,3 +82,6 @@ Each row contains information about one game. There are several columns that hav
 ### Acknowledgements
 Thanks to [RAWG](https://rawg.io/) for providing easy to use and fast [API](https://rawg.io/apidocs) \
 Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+### Inspiration
+With this data, one can create a game recommendation platform as well as drawing insights about the gaming industry and gaming trends.
