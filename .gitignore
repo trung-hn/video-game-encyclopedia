@@ -1,14 +1,16 @@
+# Custom
 /rawdata
 /data/game_info/
 /data/game_id/
+game_info.zip
+game-encyclopedia.zip
+
 # Created by https://www.gitignore.io/api/python,jupyternotebooks
 # Edit at https://www.gitignore.io/?templates=python,jupyternotebooks
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
 # website: http://jupyter.org/
-
-game_info*.zip
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
