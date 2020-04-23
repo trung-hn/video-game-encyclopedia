@@ -24,6 +24,9 @@ Visit [Kaggle page](https://www.kaggle.com/jummyegg/rawg-game-dataset) for the f
         |-- 2.json
         `-- *.json
 ```
+### How to Start
+`pip3 install -r requirements.txt`
+
 ### Steps to replicate the dataset:
 1. Run `Get_game_id.ipynb`. This will go through all pages in https://api.rawg.io/api/games?page=1 and save a JSON file for **each page** in `./data/game_id/*.json` where `*` is the page number. At the end, `./data/game_id.csv` is created containing information of all downloaded JSON files to prepare for the next step.
 2. Run `Get_game_info.ipynb`. This will get each game information i.e. https://api.rawg.io/api/games/ and save a JSON file for **each game** in `./data/game_info/*.json` where `*` is the game id.
