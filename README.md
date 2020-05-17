@@ -9,9 +9,11 @@ Visit [Kaggle page](https://www.kaggle.com/jummyegg/rawg-game-dataset) for the f
 ### Directory Tree
 ```
 .
-|-- Combine_game_info.ipynb
-|-- Get_game_id.ipynb
-|-- Get_game_info.ipynb
+|-- src
+|   |-- Combine_game_info.ipynb
+|   |-- Get_game_id.ipynb
+|   `-- Get_game_info.ipynb
+|
 `-- data
     |-- game_id.csv
     |-- game_info.csv
@@ -19,6 +21,7 @@ Visit [Kaggle page](https://www.kaggle.com/jummyegg/rawg-game-dataset) for the f
     |   |-- 1.json
     |   |-- 2.json
     |   `-- *.json
+    |
     `-- game_info
         |-- 1.json
         |-- 2.json
