@@ -33,25 +33,26 @@ Visit [Kaggle page](https://www.kaggle.com/jummyegg/rawg-game-dataset) for the f
 ### Steps to replicate the dataset:
 1. Run `Get_game_id.ipynb`. This makes request to all pages in https://api.rawg.io/api/games?page=1 and save one JSON file for **each page** in `./data/game_id/*.json` where `*` is the page number. At the end, `./data/game_id.csv` is created which contains the name and id of each game which is needed for step 2.
 2. Run `Get_game_info.ipynb`. Using the id from Step 1, this script makes request to https://api.rawg.io/api/games/ and save one JSON file for **each game** in `./data/game_info/*.json` where `*` is the game id.
-3. Run `Combine_game_info.ipynb`. This combines data in `./data/game_info/` and saves it as `./data/game_info.csv`. `game_info.csv` contains the **final** data set
+3. Run `Combine_game_info.ipynb`. This combines data in `./data/game_info/` and saves it as `./data/game_info.csv`. `game_info.csv` contains the **final** dataset
 
 #### Important Notes:
-- Only wanted information are saved in JSON files: 
-    - `./data/game_id` with 17000 files has the size of ~10MBs. 
-    - `./data/game_info` with 350000 files has the size of ~170MBs
-- To increase the speed of obtaining the data from RAWG API, concurrent programming is applied to step 1 and 2. 
-    - Step 1 takes ~40 minutes with 50 threads
-    - Step 2 takes ~100 minutes with 100 threads
-    - Step 3 takes ~5 minutes
-- When 1 thread fails while requesting data, it will skip to next game/page **without** any notification. To make sure you get all games from RAWG, you can run Step 1 and Step 2 multiple times. Downloaded files are **skipped** automatically.
+- File sizes: 
+    - `./data/game_id` with 25000 files has the size of ~15MBs. 
+    - `./data/game_info` with 470000 files has the size of ~230MBs
+- To increase the speed of obtaining the data from RAWG API, concurrent programming is applied to step 1 and 2. However, execution time depends greatly on internet connection speed.
+    - Step 1 takes ~1 hour with 32 threads
+    - Step 2 takes ~3-5 hours with 64 threads
+    - Step 3 takes ~2 minutes
+- RAWG API has a limit of 500,000 page views a month. As more games come out in the future, it would be hard to get all game information in one run without exceeding this limitation. 
+- When 1 thread fails while requesting data, it will skip to next game/page automatically. To make sure you get all games from RAWG, you can run Step 1 and Step 2 multiple times. Downloaded files are **skipped** automatically.
 
 #### Limitations:
 - To reduce the file size of downloaded files and the final CSV dataset, **not all** JSON information is downloaded. If you want more customization, you will need to change how the JSON is handled in Step 2
-- Although Multithreading is applied, the whole process can take up to ~3 hours to finish because of the large amount of data.
+- Although Multithreading is applied, the whole process can take up to ~6 hours to finish because of the large amount of data.
 
 ___
 ### Context
-This is a game data set containing 345667 games on over 50 platforms including mobiles. All games information is obtained using Python with [RAWG API](https://rawg.io/apidocs). This data set was last updated on Nov 10th 2019. If you are interested in obtaining more recent games, visit the [GitHub](https://github.com/trung-hn/game-encyclopedia) page for more information.
+This dataset contains 474417 video games on over 50 platforms including mobiles. All game information was obtained using Python with [RAWG API](https://rawg.io/apidocs). This dataset was last updated on **Dec 22nd 2020**. If you are interested in obtaining more recent games, visit the [GitHub](https://github.com/trung-hn/game-encyclopedia) page for more information. I plan to update this dataset annually.
 
 ### Content
 Each row contains information about one game. There are several columns that have multiple values like platforms, genres, ... In those cases, values are separated by double pipes `||`.
